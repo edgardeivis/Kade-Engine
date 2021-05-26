@@ -15,7 +15,7 @@ class BackgroundDancer extends FlxSprite
 		animation.play('danceLeft');
 		antialiasing = true;
 	}
-
+	
 	var danceDir:Bool = false;
 
 	public function dance():Void
