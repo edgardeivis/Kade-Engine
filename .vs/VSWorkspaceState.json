@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.github\\ISSUE_TEMPLATE",
+    "\\.github\\PULL_REQUEST_TEMPLATE",
+    "\\.github\\workflows",
+    "\\assets\\preload\\data",
+    "\\assets\\preload\\data\\revolution"
+  ],
+  "PreviewInSolutionExplorer": false
+}
