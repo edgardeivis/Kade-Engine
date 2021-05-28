@@ -732,6 +732,19 @@ class PlayState extends MusicBeatState
 						halloweenBG.animation.play('idle');
 						add(halloweenBG);	
 				}
+			case 'park0':
+				{
+						defaultCamZoom = 0.7;
+						curStage = 'park0';
+						var hallowText = Paths.getSparrowAtlas('finalbg','shared');
+						halloweenBG = new FlxSprite(-600, -200);
+						halloweenBG.frames = hallowText;
+						halloweenBG.animation.addByPrefix('idle', 'BackGround');
+						halloweenBG.antialiasing = true;
+						halloweenBG.scrollFactor.set(0.9, 0.9);
+						halloweenBG.animation.play('idle');
+						add(halloweenBG);	
+				}
 			default:
 			{
 					defaultCamZoom = 0.9;
