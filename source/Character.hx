@@ -181,9 +181,9 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'mad tree left', 24);
 
 				addOffset('idle', 400, 400);
-				addOffset("singUP", 400, 348);
-				addOffset("singRIGHT", 353, 400);
-				addOffset("singLEFT", 447, 400);
+				addOffset("singUP", 400, 455);
+				addOffset("singRIGHT", 327, 400);
+				addOffset("singLEFT", 508, 400);
 				addOffset("singDOWN", 400, 380);
 
 			case 'tree2old':
@@ -464,6 +464,25 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+			case 'duck':
+				var tex = Paths.getSparrowAtlas('characters/Duckiny125');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", 3, 58);
+				addOffset("singRIGHT", -7, 0);
+				addOffset("singLEFT", 22, 0);
+				addOffset("singDOWN", 0, 0);
+
+
+				playAnim('idle');
+
+				flipX = true;
 			case 'bf-anzo':
 				var tex = Paths.getSparrowAtlas('characters/Anzo');
 				frames = tex;

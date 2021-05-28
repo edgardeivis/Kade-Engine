@@ -20,3 +20,4 @@ Thorns:spirit:6
 Trunk:tree:7
 Warning:tree2:7
 Revolution:tree3:7
+Quack:duck:8

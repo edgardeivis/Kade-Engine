@@ -702,56 +702,35 @@ class PlayState extends MusicBeatState
 						halloweenBG.antialiasing = true;
 						halloweenBG.scrollFactor.set(0.9, 0.9);
 						halloweenBG.animation.play('idle');
-						add(halloweenBG);
-	
-
+						add(halloweenBG);	
 	
 				}
 			case 'park2':
 				{
+						defaultCamZoom = 0.7;
 						curStage = 'park2';
-						halloweenLevel = true;
-						defaultCamZoom = 0.9;
-
-						var hallowTex = Paths.getSparrowAtlas('nightback','shared');
-
+						var hallowText = Paths.getSparrowAtlas('tree_and_bg2','shared');
 						halloweenBG = new FlxSprite(-600, -200);
-						halloweenBG.frames = hallowTex;
-						halloweenBG.animation.addByPrefix('idle', 'halloweem bg0');
-						halloweenBG.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
-						halloweenBG.animation.play('idle');
+						halloweenBG.frames = hallowText;
+						halloweenBG.animation.addByPrefix('idle', 'BackGround');
 						halloweenBG.antialiasing = true;
-						add(halloweenBG);
-
-						isHalloween = true;
-	
-						var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('nightfront'));
-						stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
-						stageFront.updateHitbox();
-						stageFront.antialiasing = true;
-						stageFront.scrollFactor.set(0.9, 0.9);
-						stageFront.active = false;
-						add(stageFront);
+						halloweenBG.scrollFactor.set(0.9, 0.9);
+						halloweenBG.animation.play('idle');
+						add(halloweenBG);	
 	
 				}
 			case 'park3':
 				{
-						defaultCamZoom = 0.9;
+						defaultCamZoom = 0.6;
 						curStage = 'park3';
-						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stage_back_3'));
-						bg.antialiasing = true;
-						bg.scrollFactor.set(0.9, 0.9);
-						bg.active = false;
-						add(bg);
-	
-						var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('nightfront'));
-						stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
-						stageFront.updateHitbox();
-						stageFront.antialiasing = true;
-						stageFront.scrollFactor.set(0.9, 0.9);
-						stageFront.active = false;
-						add(stageFront);
-	
+						var hallowText = Paths.getSparrowAtlas('tree_and_bg3','shared');
+						halloweenBG = new FlxSprite(-600, -200);
+						halloweenBG.frames = hallowText;
+						halloweenBG.animation.addByPrefix('idle', 'BackGround');
+						halloweenBG.antialiasing = true;
+						halloweenBG.scrollFactor.set(0.9, 0.9);
+						halloweenBG.animation.play('idle');
+						add(halloweenBG);	
 				}
 			default:
 			{
@@ -826,6 +805,9 @@ class PlayState extends MusicBeatState
 			case 'pico':
 				camPos.x += 600;
 				dad.y += 300;
+			case 'duck':
+				dad.x += 119;
+				dad.y += 560;
 			case 'parents-christmas':
 				dad.x -= 500;
 			case 'senpai':

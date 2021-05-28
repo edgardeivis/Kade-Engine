@@ -337,6 +337,7 @@ class DialogueBox extends FlxSpriteGroup
 				portraitRight.visible = false;
 				portraitRightgf.visible = false;
 				portraitLeftt.visible = false;
+				GFBFport.visible = false;
 				if (!portraitRight.visible)
 				{
 					portraitRightbf.visible = true;
@@ -384,6 +385,7 @@ class DialogueBox extends FlxSpriteGroup
 				portraitRight.visible = false;
 				portraitRightbf.visible = false;
 				portraitLeftt.visible = false;
+				GFBFport.visible = false;
 				if (!portraitRightgf.visible)
 				{
 					portraitRightgf.visible = true;
