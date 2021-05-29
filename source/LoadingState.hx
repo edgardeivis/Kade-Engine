@@ -132,6 +132,7 @@ class LoadingState extends MusicBeatState
 			FlxG.sound.music.stop();
 		
 		FlxG.switchState(target);
+
 	}
 	
 	static function getSongPath()
