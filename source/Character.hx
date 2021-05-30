@@ -205,6 +205,23 @@ class Character extends FlxSprite
 				playAnim('idle');
 			case 'tree3':
 				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/BroTheTreeJustDiedThisIsSoSad');
+				frames = tex;
+				animation.addByPrefix('idle', 'angry tree idle dance', 24);
+				animation.addByPrefix('singUP', 'angry tree up', 24);
+				animation.addByPrefix('singRIGHT', 'angry tree right', 24);
+				animation.addByPrefix('singDOWN', 'angry tree down', 24);
+				animation.addByPrefix('singLEFT', 'angry tree left', 24);
+
+				addOffset('idle', 400, 400);
+				addOffset("singUP", 400, 455);
+				addOffset("singRIGHT", 327, 400);
+				addOffset("singLEFT", 508, 400);
+				addOffset("singDOWN", 400, 380);
+
+				playAnim('idle');
+			case 'tree3old':
+				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/TreeButSuperMadAndCrap');
 				frames = tex;
 				animation.addByPrefix('idle', 'tree idle', 24);
@@ -220,6 +237,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;

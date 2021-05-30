@@ -78,7 +78,7 @@ class PlayState extends MusicBeatState
 	public static var bads:Int = 0;
 	public static var goods:Int = 0;
 	public static var sicks:Int = 0;
-
+	public static var cutsceneplayed:Bool = true;
 	public static var songPosBG:FlxSprite;
 	public static var songPosBar:FlxBar;
 
@@ -1138,7 +1138,18 @@ class PlayState extends MusicBeatState
 				add(red);
 			}
 		}
-
+		if (SONG.song.toLowerCase() == 'revolution')
+		{
+			if (cutsceneplayed)
+			{
+				FlxG.switchState(new VideoState('assets/videos/cass/video.webm', new PlayState()));
+				cutsceneplayed = false;
+			}
+			else
+			{
+			
+			}
+		}
 		new FlxTimer().start(0.3, function(tmr:FlxTimer)
 		{
 			black.alpha -= 0.15;

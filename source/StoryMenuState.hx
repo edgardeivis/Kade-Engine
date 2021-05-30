@@ -31,7 +31,7 @@ class StoryMenuState extends MusicBeatState
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['Trunk', 'Warning', 'Revolution'],
+		['Trunk','Warning','Revolution'],
 		['Quack']
 	];
 	var curDifficulty:Int = 1;
@@ -308,8 +308,8 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				//LoadingState.loadAndSwitchState(new PlayState(), true);
-								FlxG.switchState(new VideoState('assets/videos/cass/video.webm', new PlayState()));
+				LoadingState.loadAndSwitchState(new PlayState(), true);
+				//				FlxG.switchState(new VideoState('assets/videos/cass/video.webm', new PlayState()));
 			});
 		}
 	}
